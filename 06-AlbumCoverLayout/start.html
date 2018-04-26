@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- Wes Bos CSS grid course! -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -102,6 +102,17 @@
       margin: 0 0 20px 0;
     }
 
+    .albums {
+      display: grid;
+      /* Minmax allows you to give min and max value and it will automaticlly create it */
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+      grid-gap: 20px;
+    }
+
+
     .album {
       background: rgba(255, 255, 255, 0.2);
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -109,6 +120,14 @@
       background: lightslategrey;
       color: black;
       font-weight: 100;
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      align-items: center;
+      grid-gap: 20px;
+    }
+
+    .album__artwork {
+      width: 100px;
     }
 
   </style>

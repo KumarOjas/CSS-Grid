@@ -41,12 +41,33 @@
         </div>
 
         <style>
-        
+            /* justify horizontal grid 
+            align is always vertical */
+
             .container {
                 display: grid; 
                 grid-gap:20px;
-                grid-template-columns: repeat(5, 1fr);
+                grid-template-columns: repeat(5, 100px);
+                /* by default items shrunk to width of content size */
+                justify-items: center;
+                /* justify-items: start;
+                justify-items: end;
+                justify-items: stretch; */
+                grid-template-rows: repeat(6, 200px);
+                align-items: center;
 
+                /* centers entire grid inside the container */
+                justify-content: center; 
+                /* justify-content: start;
+                justify-content: end;
+                justify-content: stretch; */
+                justify-content: space-between;
+                /* justify-content: space-around; */
+            }
+
+            .item8 {
+                /* only move one item and override alignment within grid */
+                justify-self: start;
             }
 
 
@@ -55,6 +76,7 @@
                 font-size:2em;
                 border:1px solid grey;
                 background:lightgrey;
+                padding: 20px;
             }
        
         </style>

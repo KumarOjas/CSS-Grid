@@ -21,7 +21,7 @@
                 <div class="item item12">12</div>
                 <div class="item item13">13</div>
                 <div class="item item14">14</div>
-                <div class="item item15">15</div>
+                <div class="item item15">22222222222215</div>
 
         </div>
 
@@ -30,9 +30,27 @@
             .container {
                 display: grid; 
                 grid-gap:20px;           
-                
+                grid-template-rows: repeat(5, 200px);
+                grid-template-columns: repeat(5, 1fr);
+                /* prevent gaps but takes out of order!! */
+                grid-auto-flow: dense;
             }
+            
 
+            /* Items inside div can span into other columns / rows */
+            .item8 {
+                grid-column: span 4;
+                grid-row: span 2;
+            }
+            .item10 {
+                grid-column: span 2;
+            }
+            .item3 {
+                grid-column-start: 2;
+                grid-column-end: 5;
+                /* OR */
+                grid-column: 3 / span 2
+            }
 
             .item {
                 background-color: orange;

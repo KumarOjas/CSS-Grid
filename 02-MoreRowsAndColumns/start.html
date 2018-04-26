@@ -22,8 +22,11 @@
     
         .container {
             display: grid;
-            grid-template-columns: 100px auto 100px;
+            grid-template-columns: repeat(5, 100px);
             grid-gap:20px;
+            grid-auto-flow: column;
+            /* makes extra colums 500px */
+            grid-auto-columns: 500px;
         }
 
 
